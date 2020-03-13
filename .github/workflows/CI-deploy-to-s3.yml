@@ -32,4 +32,4 @@ jobs:
     - name: Copy files to S3 with the AWS CLI into folder named for the branch
       # the bucket must be configured in S3 before this runs
       run: |
-        aws s3 sync . s3://chesser-healthmap-covid19/${GITHUB_REF##*/}
+        aws s3 sync . s3://chesser-healthmap-covid19/${{ github.ref }}
